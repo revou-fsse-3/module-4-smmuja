@@ -1,1 +1,32 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/VXLqjAFn)
+# Basic form using React, Formic, and Tailwind  
+
+## Deployed here:
+https://react-form.smmuja.com  
+
+![React Form](src/assets/react-from.png)
+
+## This form includes  
+- Multi-step registration form using form library and Yup validation, including this information:   
+  - Step 1: Personal Information  
+    - Full Name (required)  
+    - Email Address (required, valid email format)  
+    - Date of Birth (required, with date validation)  
+  - Step 2: Address Information  
+    - Street Address (required)  
+    - City (required)  
+    - State (required)  
+    - Zip Code (required, valid format)  
+  - Step 3: Account Information  
+    - Username (required)  
+    - Password (required, strong password validation)  
+
+## Library and dependencies  
+- React js  
+- Vite  
+- Formik  
+- Yup  
+- Tailwind  
+
+## Deployment
+This form project is deployed at Netlify  
+https://react-form.smmuja.com  
