@@ -1,18 +1,25 @@
-import { Input, Text, Button, Card, Table } from '../../components';
-import { FormikState, useFormik} from 'formik';
+import { Input, Text, Button, Card } from '../../components';
+import { useFormik} from 'formik';
 import { useState } from 'react';
 import * as yup from 'yup';
 
-interface DataProps {
-    name:string;
-    age:string;
-    hobby:string;
+interface DataProps {   
+        name: string;
+        email: string;
+        birthDate: string;
+        street: string;
+        city: string;
+        state: string;
+        zip: string;
+        username: string;
+        password: string;
+
 }
 
 const HomeContainer = () => {
 
     const [users, setUsers] = useState<DataProps[]>([]);
-    const [selectedUser, setSelectedUser] = useState<DataProps>();
+    const [selectedUser] = useState<DataProps>();
     const [step, setStep] = useState<number>(1);
 
     const handleNext = () => {
@@ -29,15 +36,18 @@ const HomeContainer = () => {
         setStep((prevState) => prevState -1);
     }
     
-    const submit = (values: DataProps, {resetForm}: Partial<FormikState<DataProps>>) => {
-        setUsers([...users, values])
-    }
 
     const formMik = useFormik ({
         initialValues: selectedUser ?? {
             name: '',
-            age: '',
-            hobby: '',
+            email: '',
+            birthDate: '',
+            street: '',
+            city: '',
+            state: '',
+            zip: '',
+            username: '',
+            password: '',
         },
         onSubmit: (values, {resetForm}) => {
             setUsers([...users, values])
@@ -59,43 +69,11 @@ const HomeContainer = () => {
         enableReinitialize: true
     });
 
-    const onDelete = (index: number) => {
-        setUsers((prevState) => prevState.filter((_, dataIndex) => dataIndex !== index))
-    }
 
-    const onEdit = (index: number) => {
-        const findUser = users.find((_, dataIndex) => dataIndex === index);
-
-        setSelectedUser(findUser);
-        // formMik.setFieldValue('name', selectedUser?.name)
-        // formMik.setFieldValue('age', selectedUser?.age)
-        // formMik.setFieldValue('hobby', selectedUser?.hobby)
-    }
 
     return(
         <Card  border={false} className='flex flex-col gap-2.5'>
         
-    
-            {/* <Card border>
-                <Table headers= {[
-                    {
-                        label: 'Nama',
-                        key: 'name',
-                    },
-                    {
-                        label: 'Umur',
-                        key: 'age',
-                    },
-                    {
-                        label: 'Hobi',
-                        key: 'hobby',
-                    },
-                ]} data={users}
-                onEdit={onEdit}
-                onDelete={onDelete}/>
-
-                
-            </Card> */}
 
             <Card border>
                 {step === 1 && (
@@ -247,9 +225,6 @@ const HomeContainer = () => {
 
                     </form>
                 )}
-
-                {/* <Button label={'Previous'} onClick={handlePrevious} type='button' className='bg-gray-500' />
-                <Button label={'Next'} onClick={handleNext} type='button' className='bg-gray-500' /> */}
 
             </Card>
         </Card>
