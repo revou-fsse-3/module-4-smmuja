@@ -1,32 +1,35 @@
-# Basic form using React, Formic, and Tailwind  
+# Basic Login form using React, Formik, and Axios API  
 
-## Deployed here:
+## Deployed here:  
+
 https://react-form.smmuja.com  
 
-![React Form](src/assets/react-from.png)
+## Component  
 
-## This form includes  
-- Multi-step registration form using form library and Yup validation, including this information:   
-  - Step 1: Personal Information  
-    - Full Name (required)  
-    - Email Address (required, valid email format)  
-    - Date of Birth (required, with date validation)  
-  - Step 2: Address Information  
-    - Street Address (required)  
-    - City (required)  
-    - State (required)  
-    - Zip Code (required, valid format)  
-  - Step 3: Account Information  
-    - Username (required)  
-    - Password (required, strong password validation)  
+- Public page  
+Accessible by public, no authorization needed  
+  - Registration page  
+
+  ![Register](src/assets/module-4-register.png)
+
+  - Login page  
+  ![Login](src/assets/module-4-login.png)
+
+- Private page  
+Authorization needed, where user can perform authorized actions such as create, update, and delete  
+  - Category page  
+  ![Category](src/assets/module-4-category.png)
 
 ## Library and dependencies  
+
 - React js  
 - Vite  
 - Formik  
 - Yup  
 - Tailwind  
+- Axios  
 
-## Deployment
+## Deployment  
+
 This form project is deployed at Netlify  
 https://react-form.smmuja.com  

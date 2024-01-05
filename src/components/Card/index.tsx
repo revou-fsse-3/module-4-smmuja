@@ -8,7 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement>{
 const Card = ({ border, children, ...props} : Props) => {
 
     return (
-        <div className={`${border && 'rounded border-slate-100 border'} p-8 ${props.className}`}>
+        <div className={`${border && 'rounded border-slate-600 border'} p-8 ${props.className}`}>
             {children}
 
         </div>
