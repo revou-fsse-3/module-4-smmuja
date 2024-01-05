@@ -14,11 +14,11 @@ interface FormProps {
 }
 
 const schema = yup
-  .object({
+.object({
     id: yup.string().required(),
     name: yup.string().required(),
     is_active: yup.boolean().required(),
-  })
+})
 .required()
 
 const Edit = () => {
