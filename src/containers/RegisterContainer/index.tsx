@@ -5,12 +5,6 @@ import * as yup from 'yup';
 import axios, { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
 import { AppContext, ContextType } from "../../Provider";
-// import { Controller, useForm } from "react-hook-form"
-// import { yupResolver } from "@hookform/resolvers/yup"
-
-
-
-
 
 interface DataProps {   
         name: string;
